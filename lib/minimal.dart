@@ -15,7 +15,8 @@ class _MinimalState extends State<Minimal> {
         title: Text('EXPLORE',
             style: TextStyle(
               fontFamily: 'Montserrat',
-              fontSize: 15.0,
+              fontSize: 14.0,
+              fontWeight: FontWeight.w600,
               color: Colors.black,
             )),
         centerTitle: true,
@@ -23,7 +24,7 @@ class _MinimalState extends State<Minimal> {
           icon: Icon(Icons.arrow_back),
           tooltip: 'Back',
           color: Colors.black,
-          iconSize: 17.0,
+          iconSize: 18.0,
           onPressed: () {
             Navigator.pop(context);
           },
@@ -33,28 +34,28 @@ class _MinimalState extends State<Minimal> {
             icon: Icon(Icons.search),
             tooltip: 'Search',
             color: Colors.black,
-            iconSize: 17.0,
+            iconSize: 18.0,
             onPressed: () {},
           ),
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
+        padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
         children: <Widget>[
           Container(
-            height: 125.0,
+            height: 100.0,
             width: double.infinity,
             child: ListView(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0),
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(10.0),
               children: <Widget>[
                 Column(
                   children: <Widget>[
                     Container(
-                      height: 70.0,
-                      width: 70.0,
+                      height: 56.0,
+                      width: 56.0,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(35.0),
+                        borderRadius: BorderRadius.circular(28.0),
                         color: Colors.orange,
                       ),
                       child: IconButton(
@@ -70,14 +71,14 @@ class _MinimalState extends State<Minimal> {
                       'Add To',
                       style: TextStyle(
                         fontFamily: 'Montserrat',
-                        fontSize: 14.0,
+                        fontSize: 12.0,
                         fontWeight: FontWeight.w600,
                       ),
                     )
                   ],
                 ),
                 SizedBox(
-                  width: 25.0,
+                  width: 26.0,
                 ),
                 listItem(
                   'images/chris.jpg',
@@ -85,7 +86,7 @@ class _MinimalState extends State<Minimal> {
                   true,
                 ),
                 SizedBox(
-                  width: 25.0,
+                  width: 26.0,
                 ),
                 listItem(
                   'images/hugh.jpg',
@@ -93,7 +94,7 @@ class _MinimalState extends State<Minimal> {
                   false,
                 ),
                 SizedBox(
-                  width: 25.0,
+                  width: 26.0,
                 ),
                 listItem(
                   'images/johnnydepp.jpg',
@@ -101,7 +102,7 @@ class _MinimalState extends State<Minimal> {
                   true,
                 ),
                 SizedBox(
-                  width: 25.0,
+                  width: 26.0,
                 ),
                 listItem(
                   'images/tomcruise.jpg',
@@ -133,6 +134,9 @@ class _MinimalState extends State<Minimal> {
             '10:40 PM',
             'I like the way to place Items to show more information',
           ),
+          SizedBox(
+            height: 10.0,
+          ),
           thirdStyleRow(
             'images/hugh.jpg',
             'Hugh Jackman',
@@ -165,6 +169,9 @@ class _MinimalState extends State<Minimal> {
             '10:40 PM',
             'I like the way to place Items to show more information',
           ),
+          SizedBox(
+            height: 10.0,
+          ),
           thirdStyleRow(
             'images/hugh.jpg',
             'Hugh Jackman',
@@ -196,6 +203,9 @@ class _MinimalState extends State<Minimal> {
             'Tom Cruise',
             '10:40 PM',
             'I like the way to place Items to show more information',
+          ),
+          SizedBox(
+            height: 10.0,
           ),
           thirdStyleRow(
             'images/hugh.jpg',
@@ -216,10 +226,10 @@ class _MinimalState extends State<Minimal> {
     return Column(
       children: <Widget>[
         Container(
-          height: 70.0,
-          width: 70.0,
+          height: 56.0,
+          width: 56.0,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(35.0),
+            borderRadius: BorderRadius.circular(28.0),
             image: DecorationImage(
               image: AssetImage(imgPath),
               fit: BoxFit.cover,
@@ -235,7 +245,7 @@ class _MinimalState extends State<Minimal> {
               name,
               style: TextStyle(
                 fontFamily: 'Montserrat',
-                fontSize: 14.0,
+                fontSize: 12.0,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -244,10 +254,10 @@ class _MinimalState extends State<Minimal> {
             ),
             available
                 ? Container(
-                    height: 10.0,
-                    width: 10.0,
+                    height: 6.0,
+                    width: 6.0,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5.0),
+                      borderRadius: BorderRadius.circular(3.0),
                       color: Colors.orange,
                     ),
                   )
@@ -272,6 +282,7 @@ class _MinimalState extends State<Minimal> {
             maxLines: 2,
             style: TextStyle(
               fontFamily: 'Montserrat',
+              fontSize: 13.0,
             ),
           ),
           SizedBox(
@@ -300,7 +311,7 @@ class _MinimalState extends State<Minimal> {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontFamily: 'Montserrat',
-                      fontSize: 14.0,
+                      fontSize: 12.0,
                       fontWeight: FontWeight.w600,
                       color: Colors.orange,
                     ),
@@ -310,6 +321,7 @@ class _MinimalState extends State<Minimal> {
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontFamily: 'Montserrat',
+                      fontSize: 12.0,
                       color: Colors.grey,
                     ),
                   )
@@ -338,10 +350,7 @@ class _MinimalState extends State<Minimal> {
   Widget firstStyleRow(String imgPath1, String imgPath2, String imgAvatar,
       String name, String hour, String description) {
     return Container(
-      padding: EdgeInsets.only(
-        left: 10.0,
-        right: 10.0,
-      ),
+      padding: EdgeInsets.only(left: 20.0, right: 20.0),
       child: Row(
         children: <Widget>[
           Flexible(
@@ -367,7 +376,7 @@ class _MinimalState extends State<Minimal> {
             ),
           ),
           SizedBox(
-            width: 10.0,
+            width: 20.0,
           ),
           Flexible(
             flex: 1,
@@ -384,10 +393,7 @@ class _MinimalState extends State<Minimal> {
   Widget secondStyleRow(String imgPath1, String imgPath2, String imgAvatar,
       String name, String hour, String description) {
     return Container(
-      padding: EdgeInsets.only(
-        left: 10.0,
-        right: 10.0,
-      ),
+      padding: EdgeInsets.only(left: 20.0, right: 20.0),
       child: Row(
         children: <Widget>[
           Flexible(
@@ -398,7 +404,7 @@ class _MinimalState extends State<Minimal> {
             ),
           ),
           SizedBox(
-            width: 10.0,
+            width: 20.0,
           ),
           Flexible(
             flex: 1,
@@ -437,10 +443,7 @@ class _MinimalState extends State<Minimal> {
       String hour2,
       String description2) {
     return Container(
-      padding: EdgeInsets.only(
-        left: 10.0,
-        right: 10.0,
-      ),
+      padding: EdgeInsets.only(left: 20.0, right: 20.0),
       child: Row(
         children: <Widget>[
           Flexible(
@@ -448,7 +451,7 @@ class _MinimalState extends State<Minimal> {
             child: infoUser(imgAvatar1, name1, hour1, description1),
           ),
           SizedBox(
-            width: 10.0,
+            width: 20.0,
           ),
           Flexible(
             flex: 1,
