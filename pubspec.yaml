@@ -50,6 +50,12 @@ flutter:
     - images/cone.jpeg
     - images/window.jpeg
     - images/letter.jpeg
+    - images/bananaberry.jpeg
+    - images/bananabreak.jpg
+    - images/dumplings.jpeg
+    - images/fruitbreak.jpeg
+    - images/fruitpancake.jpeg
+    - images/noodles.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -66,6 +72,9 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
+    - family: Comfortaa
+      fonts:
+        - asset: fonts/Comfortaa-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

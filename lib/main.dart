@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'minimal.dart';
+import 'chefProfile.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,16 +35,13 @@ class MyApp extends StatelessWidget {
                           builder: (context) => Minimal()),
                     );
                     break;
-//                  case 1:
-//                    Navigator.push(
-//                      context,
-//                      MaterialPageRoute(
-//                          builder: (context) => AuthProvider(
-//                            auth: Auth(),
-//                            child: RootPage(),
-//                          )),
-//                    );
-//                    break;
+                  case 1:
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ChefProfile()),
+                    );
+                    break;
 //                  case 2:
 //                    Navigator.push(
 //                      context,
