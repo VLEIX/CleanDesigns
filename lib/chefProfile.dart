@@ -8,40 +8,35 @@ class ChefProfile extends StatefulWidget {
 class _ChefProfileState extends State<ChefProfile> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      fit: StackFit.expand,
-      children: <Widget>[
-        Scaffold(
-          body: ListView(
-            children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  Container(
-                    height: 350.0,
-                    width: double.infinity,
-                  ),
-                  Container(
-                    height: 200.0,
-                    width: double.infinity,
-                    color: Color(0xFFFA624F),
-                  ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: IconButton(
-                      icon: Icon(Icons.arrow_back_ios),
-                      color: Colors.white,
-                      iconSize: 18.0,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ),
-                ],
-              )
-            ],
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            height: 44.0,
+            child: AppBar(
+              title: Text('dsd'),
+              backgroundColor: Colors.red,
+              elevation: 0.0,
+              leading: IconButton(
+                icon: Icon(Icons.arrow_back_ios),
+                tooltip: 'Back',
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
           ),
-        )
-      ],
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/food_pattern.png'),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
